@@ -5,6 +5,6 @@
 void welcome();
 void join(unsigned int *primaryKey, int primaryKeyLen, 
         unsigned int *foreignKey, int foreignKeyLen,
-        std::list<unsigned int> &result);
+        std::list<std::pair<unsigned int, unsigned int> > &result);
 
 #endif /* JOINALGORITHMS_H */

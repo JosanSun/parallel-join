@@ -29,7 +29,7 @@ int main()
     // join算法实现要求：采用自然连接，将外键中数值跟主键相同的索引跟主键连接在一起
     // 所以输出值是一个大小不定（最大为外键数据集的数量）的list，其中first为主键，
     // second为原外键的索引。
-    std::list<unsigned int> result;
+    std::list<std::pair<unsigned int, unsigned int> > result;
     join(primaryKey, primaryKeyLen, foreignKey, foreignKeyLen, result);
 
     struct timespec tw2;
@@ -39,7 +39,7 @@ int main()
     std::cout << "Wall time: " << posix_wall << " ms\n";
 
     // 这里输出join的结果的元组数
-    std::cout << "The number of join result us " << result.size() << std::endl;
+    std::cout << "The number of join result is " << result.size() << std::endl;
 
     delete []primaryKey;
     delete []foreignKey;

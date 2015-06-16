@@ -15,8 +15,8 @@ set(CMAKE_C_FLAGS_DEBUG ${DEBUG_FLAGS})
 
 set(CMAKE_CONFIGURATION_TYPES Debug Release)
 
-set(current_lib serial_nested_loop)
-#set(current_lib parallel_nested_loop)
+set(current_lib serial_sort)
+#set(current_lib parallel_sort)
 include_directories(${current_lib})
 add_subdirectory(${current_lib})
 set(EXTRA_LIBS ${EXTRA_LIBS} ${current_lib})
