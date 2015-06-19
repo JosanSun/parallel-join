@@ -4,8 +4,8 @@ project(ParallelJoin)
 set(Project_VERSION_MAJOR 1)
 set(Project_VERSION_MAJOR 0)
 
-set(DEBUG_FLAGS "-g -O0 -Wall")
-set(RELEASE_FLAGS "-O3")
+set(DEBUG_FLAGS "-std=c++11 -g -O0 -Wall")
+set(RELEASE_FLAGS "-std=c++11 -O3")
 
 set(CMAKE_CXX_FLAGS ${RELEASE_FLAGS})
 set(CMAKE_C_FLAGS ${RELEASE_FLAGS})
@@ -15,8 +15,9 @@ set(CMAKE_C_FLAGS_DEBUG ${DEBUG_FLAGS})
 
 set(CMAKE_CONFIGURATION_TYPES Debug Release)
 
-set(current_lib serial_sort)
+#set(current_lib serial_sort)
 #set(current_lib parallel_sort)
+set(current_lib serial_hash)
 include_directories(${current_lib})
 add_subdirectory(${current_lib})
 set(EXTRA_LIBS ${EXTRA_LIBS} ${current_lib})
