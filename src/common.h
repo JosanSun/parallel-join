@@ -6,10 +6,10 @@
 #define UNIFORM 0
 #define ZIPFHIGH 1
 #define ZIPFLOW 2
-#define DATA_TYPE UNIFORM
+#define DATA_TYPE ZIPFHIGH
 
 const char filenames[][NAMEMAX] = {
-    "DataKey128K",
+    "DataKey16M",
 #if DATA_TYPE == ZIPFLOW
     "DataZipfLow1M","DataZipfLow2M","DataZipfLow4M","DataZipfLow8M",
     "DataZipfLow16M",
@@ -21,7 +21,7 @@ const char filenames[][NAMEMAX] = {
 #endif
 };
 const int data_len[] = {
-    1<<17,
+    1<<24,
     1<<20, 1<<21, 1<<22, 1<<23,
 #if DATA_TYPE != UNIFORM
     1<<24,
