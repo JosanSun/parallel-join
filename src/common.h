@@ -6,7 +6,7 @@
 #define UNIFORM 0
 #define ZIPFHIGH 1
 #define ZIPFLOW 2
-#define DATA_TYPE ZIPFHIGH
+#define DATA_TYPE UNIFORM
 
 const char filenames[][NAMEMAX] = {
     "DataKey16M",

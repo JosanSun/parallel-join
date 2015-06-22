@@ -16,7 +16,7 @@ int main()
     loaddata(0, primaryKey, &primaryKeyLen);
     std::cout << "length of primary key is " << primaryKeyLen << std::endl;
 
-    int idx = 1;
+    int idx = 4;
     // foreign key comes from one of other dataset
     unsigned int *foreignKey = new unsigned int[data_len[idx]];
     int foreignKeyLen;

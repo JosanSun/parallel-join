@@ -16,7 +16,7 @@ void join(unsigned int *primaryKey, int primaryKeyLen,
 {
     const int maxThreadNum = std::thread::hardware_concurrency();
     // threadNum must be 2n - 1
-    const int threadNum = std::max(1, maxThreadNum - 1);
+    const int threadNum = std::min(1, maxThreadNum - 1);
     if (primaryKeyLen % (threadNum + 1) != 0 || 
             (foreignKeyLen % (threadNum + 1) != 0)) {
         std::cout << "threadNum must be 2n - 1\n";

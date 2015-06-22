@@ -33,6 +33,8 @@ void join(unsigned int *primaryKey, int primaryKeyLen,
             }
         }
     }
+    // programme will exit soon, so no need to free the memory
+    // a trick
     //for (int i = 0; i < foreignKeyLen; ++i) {
         //int j = foreignKey[i];
         //if (keys[j] != nullptr) {
